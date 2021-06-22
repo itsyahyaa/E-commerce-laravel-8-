@@ -69,7 +69,7 @@
                                 @if(Route::has('login'))
                                     @auth
                                         @if(Auth::user()->utype === 'ADM')
-                                            {{-- Admin --}}
+                                                {{-- Admin --}}
                                             <li class="menu-item menu-item-has-children parent" >
                                                 <a title="My Account" href="#">My Account({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                                 <ul class="submenu curency" >
@@ -86,6 +86,7 @@
                                                 </ul>
                                             </li>
                                         @else
+                                            {{-- User --}}
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My Account" href="#">My Account({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
