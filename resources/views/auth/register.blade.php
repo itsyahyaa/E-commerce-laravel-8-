@@ -122,6 +122,6 @@
 		</div><!--end container-->
 
 	</main>
-
+</main>
 
 </x-guest-layout>
