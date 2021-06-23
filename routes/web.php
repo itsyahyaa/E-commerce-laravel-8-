@@ -49,3 +49,6 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
 });
 
 
+
+
+//Best way to make custom authentication in laravel 8 | Laravel 8 tutorial
