@@ -59,22 +59,26 @@
                 <div class="row">
 
                     <ul class="product-list grid-products equal-container">
+                        @foreach ($products as $product)
+
 
                         <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
                             <div class="product product-style-3 equal-elem ">
                                 <div class="product-thumnail">
-                                    <a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
-                                        <figure><img src="{{ asset('assets/images/products/digital_20.jpg')}}" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+                                    <a href="detail.html" title="{{$product->name}}</span></a>">
+                                        <figure><img src="{{ asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}</span></a>"></figure>
                                     </a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="#" class="product-name"><span>Radiant-360 R6 Wireless Omnidirectional Speaker [White]</span></a>
-                                    <div class="wrap-price"><span class="product-price">$250.00</span></div>
+                                    <a href="#" class="product-name"><span>{{$product->name}}</span></a>
+                                    <div class="wrap-price"><span class="product-price">{{$product->regular_price}}</span></div>
                                     <a href="#" class="btn add-to-cart">Add To Cart</a>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
+                        @endforeach
+
+                        {{-- <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
                             <div class="product product-style-3 equal-elem ">
                                 <div class="product-thumnail">
                                     <a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
@@ -227,20 +231,22 @@
                                     <a href="#" class="btn add-to-cart">Add To Cart</a>
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
                 </div>
 
+
                 <div class="wrap-pagination-info">
-                    <ul class="page-numbers">
+                    {{-- <ul class="page-numbers">
                         <li><span class="page-number-item current" >1</span></li>
                         <li><a class="page-number-item" href="#" >2</a></li>
                         <li><a class="page-number-item" href="#" >3</a></li>
                         <li><a class="page-number-item next-link" href="#" >Next</a></li>
                     </ul>
-                    <p class="result-count">Showing 1-8 of 12 result</p>
+                    <p class="result-count">Showing 1-8 of 12 result</p> --}}
+                    {{$products->links()}}
                 </div>
             </div><!--end main products area-->
 
