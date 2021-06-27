@@ -13,7 +13,7 @@ class ShopComponent extends Component
         Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
         session()->flash('success_message','Item added in Cart');
         return redirect()->route('product.cart');
-        return redirect()->route('product.cart'); return redirect()->route;
+       
     }
 
     use WithPagination;
