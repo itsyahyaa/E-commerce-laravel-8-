@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Product;
+use Cart;
 
 class CartComponent extends Component
 {
